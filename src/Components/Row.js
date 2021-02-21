@@ -18,13 +18,12 @@ function Row(props) {
         },
     }
     const handleClick = (movie) => {
-        console.log(movie);
+
         if (trailerId) {
             setTrailerId('');
         } else {
             movieTrailer(movie?.title || movie?.name || movie?.orginal_name || "")
                 .then((url) => {
-                    console.log(url)
                     const urlParams = new URLSearchParams(new URL(url).search);
                     setTrailerId(urlParams.get("v"));
                 }).catch((error) => console.log(movie?.name, error))
