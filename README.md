@@ -13,6 +13,6 @@
 Go and replace 'YOUR_API_KEY' in "request.js" with your own TBDM API security key.
 
 ```
-npm init
+npm install
 npm start
 ```
